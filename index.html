@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  
+    <link
+      rel="stylesheet" href="style.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Moose Mountain Farm</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <div class="brand">
+          <button onclick=" openMenu()">
+            &#9776;
+          </button>
+          <a ref="index.html"> Moose Mountain Farm</a>
+        </div>
+        <div class = "header-links">
+          <a href="cart.html">Cart</a>
+          <a href="signin.html"> Sign In</a>
+        </div>
+      </header>
+      <aside class="sidebar">
+        <h3>Shopping Categories</h3>
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+          <li>
+            <a href="index.html">Bakery</a>
+          </li>
+          <li>
+            <a href="index.html">Butcher Shop</a>
+          </li>
+        </ul>
+      </aside>
+      <main class ="main">
+        <div class="content">
+        <ul class="products">
+          <li> 
+            <div class="product">
+            <img class="product-image" src="images/d1.jpg" alt="product">
+            <div class="product-name">
+              <a href="product.html">Blueberries</a>
+              </div>
+            <div class="product-price">$10.00</div>
+            <div class="product-rating"> 5 stars (10 Reviews)</div>
+          </div>
+          </li>
+          <li> 
+            <div class="product">
+            <img class="product-image" src="images/d1.jpg" alt="product">
+            <div class="product-name">
+              <a href="product.html">Blueberries</a>
+              </div>
+            <div class="product-price">$10.00</div>
+            <div class="product-rating"> 5 stars (10 Reviews)</div>
+          </div>
+          </li>
+          <li> 
+            <div class="product">
+            <img class="product-image" src="images/d1.jpg" alt="product">
+            <div class="product-name">
+              <a href="product.html">Blueberries</a>
+              </div>
+            <div class="product-price">$10.00</div>
+            <div class="product-rating"> 5 stars (10 Reviews)</div>
+          </div>
+        </li>
+          
+        </ul>
+      </div>
+      </main>
+      <footer class="footer">
+        All right reserved.
+      </footer>
+    </div>
+    <script>
+      function openMenu(){
+        document.querySelector(".sidebar").classList.add("open");
+      }
+      function closeMenu(){
+        document.querySelector(".sidebar").classList.remove("open");
+      }
+    </script>
+  </body>
 </html>
